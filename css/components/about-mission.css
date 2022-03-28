@@ -1,0 +1,126 @@
+.about-mission {
+  padding-top: 80px;
+  padding-bottom: 160px;
+  background-color: var(--athens);
+}
+.about-mission__list {
+  --mission-gap: 94px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+  grid-template-columns: repeat(3, 1fr);
+  gap: calc(var(--mission-gap) * 2);
+}
+@media (max-width: 1024px) {
+  .about-mission__list {
+    --mission-gap: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .about-mission__list {
+    --mission-gap: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .about-mission__list {
+    display: block;
+  }
+}
+.about-mission__item {
+  text-align: center;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: 48px 48px;
+  padding-top: 74px;
+  position: relative;
+}
+.about-mission__item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: calc(-1 * var(--mission-gap));
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-image: url("../img/mission-line.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+@media (max-width: 576px) {
+  .about-mission__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+.about-mission__item-title {
+  margin: 0;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--black);
+  margin-bottom: 8px;
+}
+.about-mission__item-text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--storm);
+}
+.about-mission__item--quality {
+  background-image: url("../img/like.svg");
+}
+.about-mission__item--safety {
+  background-image: url("../img/hand.svg");
+}
+.about-mission__item--comfort {
+  background-image: url("../img/slippers.svg");
+}
+.about-mission-form {
+  position: relative;
+  top: 92px;
+  padding: 48px 60px;
+  background: var(--white);
+  -webkit-box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+  box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05), 0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+  border-radius: 4px;
+}
+.about-mission-form__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.about-mission-form__field {
+  margin-right: 24px;
+}
+.about-mission-form__btn {
+  font-size: 14px;
+  padding: 13px 31px;
+}
+.about-mission__btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateY(50%) translateX(-50%);
+  -ms-transform: translateY(50%) translateX(-50%);
+  transform: translateY(50%) translateX(-50%);
+}
+.about-mission__btn a {
+  padding: 16px 111px;
+}
+.about-mission--dark {
+  position: relative;
+  padding: 80px 0 100px;
+  background-color: var(--black);
+}
+.about-mission--dark p {
+  color: rgba(255, 255, 255, 0.6);
+}
+.about-mission--dark .about-about-about-mission__item-title {
+  color: var(--white);
+}
+/*# sourceMappingURL=about-mission.css.map */
